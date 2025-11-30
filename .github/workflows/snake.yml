@@ -1,4 +1,4 @@
-name: "GitHub Snake 2023-2025"
+name: "GitHub Snake - Logo Gradient Theme"
 
 on:
   workflow_dispatch:
@@ -15,15 +15,16 @@ jobs:
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake-2023.svg?year=2023&palette=github
-            dist/github-snake-2024.svg?year=2024&palette=github
-            dist/github-snake-2025.svg?year=2025&palette=github
-            dist/github-snake-all.svg?year=now&palette=github&color_snake=#ff6600&color_dots=#ffd9b3,#ffcc80,#ffb84d,#ffa31a,#ff8c00
+            # Gradient-matching snake
+            dist/github-snake.svg?color_snake=#4F7DFB&color_dots=#4F7DFB,#5FAAF5,#55D4E8,#44E6D4,#33E6BF
+
+            # Dark mode version
+            dist/github-snake-dark.svg?palette=github-dark&color_snake=#33E6BF&color_dots=#4F7DFB,#5FAAF5,#55D4E8,#44E6D4,#33E6BF
 
       - name: Commit generated snake files
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git add dist/*
-          git commit -m "Update GitHub snakes 2023-2025" || echo "No changes to commit"
+          git commit -m "Update snake (logo gradient theme)" || echo "No changes"
           git push
