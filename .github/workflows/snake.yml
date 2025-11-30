@@ -1,0 +1,20 @@
+name: "GitHub Snake"
+on:
+  schedule:
+    - cron: "0 0 * * *" # runs daily at midnight UTC
+  workflow_dispatch:
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: Platane/snk@v3
+        with:
+          github_user_name: mohammeddarwesh
+          outputs: |
+            # Light mode SVG
+            output/github-snake.svg?palette=github&color_snake=#00ffff&color_dots=#cceeff,#99ddff,#66ccff,#33bbff,#00aaff
+            # Dark mode SVG
+            output/github-snake-dark.svg?palette=github-dark&color_snake=#00ffff&color_dots=#0077aa,#0099cc,#00bbbb,#00dddd,#00ffff
+            # Optional GIF version
+            output/github-snake-ocean.gif?color_snake=#00ffff&color_dots=#cceeff,#99ddff,#66ccff,#33bbff,#00aaff&color_background=#111111
