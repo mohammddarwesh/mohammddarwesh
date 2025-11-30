@@ -1,32 +1,29 @@
-name: "GitHub Snake"
+name: "GitHub Snake 2023-2025"
 
-# Trigger manually or daily
 on:
   workflow_dispatch:
   schedule:
-    - cron: "0 0 * * *"
+    - cron: "0 0 * * *" # daily at midnight UTC
 
 jobs:
   build:
     runs-on: ubuntu-latest
     steps:
-      # 1️⃣ Checkout the repo to allow commits
       - uses: actions/checkout@v3
 
-      # 2️⃣ Generate the snake animation
       - uses: Platane/snk@v3
         with:
           github_user_name: ${{ github.repository_owner }}
           outputs: |
-            dist/github-snake.svg
-            dist/github-snake-dark.svg?palette=github-dark
-            dist/ocean.gif?color_snake=orange&color_dots=#bfd6f6,#8dbdff,#64a1f4,#4b91f1,#3c7dd9&color_background=#aaaaaa
+            dist/github-snake-2023.svg?year=2023&palette=github&color_snake=#00ccff&color_dots=#b3f0ff,#80e6ff,#4dd9ff,#1acbff,#00bfff
+            dist/github-snake-2024.svg?year=2024&palette=github&color_snake=#00ffff&color_dots=#e0f7ff,#b3ecff,#80e0ff,#4dd4ff,#1ac8ff
+            dist/github-snake-2025.svg?year=2025&palette=github&color_snake=#00ff99&color_dots=#ccffe0,#99ffc0,#66ffa0,#33ff80,#00ff60
+            dist/github-snake-all.svg?palette=github&color_snake=#ff6600&color_dots=#ffd9b3,#ffcc80,#ffb84d,#ffa31a,#ff8c00
 
-      # 3️⃣ Commit generated files back to repo
-      - name: Commit generated files
+      - name: Commit generated snake files
         run: |
           git config --global user.name "${{ github.actor }}"
           git config --global user.email "${{ github.actor }}@users.noreply.github.com"
           git add dist/*
-          git commit -m "Update GitHub snake SVGs" || echo "No changes to commit"
+          git commit -m "Update GitHub snakes 2023-2025" || echo "No changes to commit"
           git push
