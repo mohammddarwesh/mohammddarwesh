@@ -84,9 +84,14 @@
   </a>
 </div>
 
+<br>
 
 <!-- Snake animation on contributions -->
-![snake animation](https://raw.githubusercontent.com/mohammddarwesh/mohammddarwesh/output/github-contribution-grid-snake.svg)
+<picture>
+  <source media="(prefers-color-scheme: dark)" srcset="dist/github-snake-dark.svg" />
+  <source media="(prefers-color-scheme: light)" srcset="dist/github-snake.svg" />
+  <img alt="GitHub Snake" src="dist/github-snake.svg" />
+</picture>
 
 ---
 
