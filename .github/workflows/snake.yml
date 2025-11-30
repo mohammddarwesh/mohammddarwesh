@@ -14,3 +14,10 @@ jobs:
           outputs: |
             output/github-snake.svg?palette=github&color_snake=#00ffff&color_dots=#cceeff,#99ddff,#66ccff,#33bbff,#00aaff
             output/github-snake-dark.svg?palette=github-dark&color_snake=#00ffff&color_dots=#0077aa,#0099cc,#00bbbb,#00dddd,#00ffff
+      - name: Commit generated files
+        run: |
+          git config --global user.name "${{ github.actor }}"
+          git config --global user.email "${{ github.actor }}@users.noreply.github.com"
+          git add output/*.svg
+          git commit -m "Update GitHub snake SVGs" || echo "No changes to commit"
+          git push
