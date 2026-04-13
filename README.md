@@ -12,7 +12,7 @@
 - ✅ Completed **10+ client projects** with full satisfaction; improved dashboards performance by **up to 40%**  
 - 🎨 Skilled in turning **Figma/UX designs into pixel-perfect, responsive interfaces**  
 - 🌍 Experienced in **Agile development** with distributed and remote teams  
-- 🌐 Personal website: [mdar.space](https://mdar.space)  
+- 🌐 [Personal website](https://mohammeddarwesh.vercel.app/)  
 
 ---
 
