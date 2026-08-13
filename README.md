@@ -67,7 +67,7 @@
 | Project | Description | Link |
 |---------|-------------|------|
 | **Get2Cars Dashboards** 🏎️ | Admin & Vendor dashboards for vehicle services in Egypt & Saudi. Optimized load times by **40%** – Kits Technology | [Website](https://get2cars.com/) |
-| **Restaurant Management System** 🍽️ | Next.js + Prisma with roles & menu management. Fully responsive UI | [Live Demo](https://next13-full-stack-restaurant.vercel.app/) |
+| **Restaurant Management System** 🍽️ | Next.js + Prisma with roles & menu management. Fully responsive UI | [Live Demo](https://restiq.vercel.app/) |
 | **E-Commerce Admin Platform** 🛒 | Admin panel with Stripe integration, product & payment control | [Live Demo](https://next13-ecommerce-admin-alpha.vercel.app/) |
 | **Learning Platform (Storky-Lite)** 🎓 | Educational platform built with Next.js, TypeScript, Tailwind | [GitHub](https://github.com/mohammddarwesh/Storky-Lite) |
 
